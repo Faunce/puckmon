@@ -1,3 +1,0 @@
-# Optional - Defaults to US/Eastern if not specified.  Uses IANA format (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
-timezone: America/New_York
-

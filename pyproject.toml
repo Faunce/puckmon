@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "puckmon"
+version = "1.0.0"
+description = "NHL game schedule viewer with ASCII art"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Jacob Faunce", email = "jfaunce2000@gmail.com"}
+]
+keywords = ["nhl", "hockey", "schedule", "ascii", "sports"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Games/Entertainment",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+# Dependencies
+dependencies = [
+    "PyYAML>=6.0",
+    "tzdata>=2023.3; sys_platform == 'win32'",
+    "backports.zoneinfo>=0.2.1; python_version < '3.9'",
+]
+
+# Command-line entry point
+[project.scripts]
+puckmon = "puckmon.main:main"
+
+# Project URLs
+[project.urls]
+Homepage = "https://github.com/Faunce/puckmon"
+Repository = "https://github.com/Faunce/puckmon"
+Issues = "https://github.com/Faunce/puckmon/issues"
+
+# Setuptools configuration
+[tool.setuptools]
+packages = ["puckmon"]
+
+[tool.setuptools.package-data]
+puckmon = ["assets/**/*", "config/*.yml"]
