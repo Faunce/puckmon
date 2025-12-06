@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "puckmon"
+version = "1.0.0"
+dependencies = [
+    "PyYAML>=6.0",
+    "tzdata>=2023.3; sys_platform == 'win32'",
+    "backports.zoneinfo>=0.2.1; python_version < '3.9'",
+]
+
+[project.scripts]
+puckmon = "puckmon.main:main"
