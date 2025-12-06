@@ -1,6 +1,9 @@
 """
 Puckmon: NHL Game Schedule Viewer
 Displays NHL game schedules with ASCII art logos and scores.
+
+ASCII formatting methods written largely by claude
+API documentation from https://github.com/Zmalski/NHL-API-Reference
 """
 
 import os
@@ -178,6 +181,7 @@ class AssetManager:
                 print(f"Error reading asset {name}: {e}")
         
         return [f"[{category} asset not found: {name}]"]
+        # common with defunct / renamed teams - coyotes / utah hockey club games weren't retroactively ported to utah mammoth.
     
     def load_number_ascii(self, number: int) -> List[str]:
         """
@@ -532,14 +536,14 @@ class GameDisplay:
             " " * (LOGO_SPACER_WIDTH + VS_SYMBOL_WIDTH + LOGO_SPACER_WIDTH) + 
             home_full_name.center(width_home)
         )
-        lines.append("")  # Blank line
+        lines.append("")  # Blank line for formatting
         
         # Scores (if game has started)
         if away_score is not None and home_score is not None:
             lines.extend(self._format_score_lines(
                 away_score, home_score, width_away, width_home
             ))
-            lines.append("")  # Blank line
+            lines.append("")  # Blank line for formatting
         
         # Team records from standings
         away_record = standings.get(away_name, "0-0-0 (0 pts)")
@@ -549,7 +553,7 @@ class GameDisplay:
             " " * (LOGO_SPACER_WIDTH + VS_SYMBOL_WIDTH + LOGO_SPACER_WIDTH) + 
             home_record.center(width_home)
         )
-        lines.append("")  # Blank line
+        lines.append("")  # Blank line for formatting
         
         return lines
     
@@ -715,10 +719,8 @@ class PuckmonApp:
 # Entry Point
 # ==============================
 def main():
-    """Application entry point."""
     app = PuckmonApp()
     app.run()
-
 
 if __name__ == "__main__":
     main()
