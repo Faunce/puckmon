@@ -53,3 +53,10 @@ Supported timezones: Any valid IANA timezone (e.g., "US/Pacific", "US/Central", 
 - Python 3.9 or higher
 - curl (for API requests)
 - Internet connection
+
+## Credits
+All ascii logos are based upon the NHL logos which I do not own in any way, and do not intend to ever profit from in any way.  This software is free, and will always be free.
+The API endpoints used were provided by https://github.com/Zmalski/NHL-API-Reference.  A fantastic collection of public API endpoints from the NHL
+
+## AI Usage 
+Claude was used for the ascii formatting portion of this project
