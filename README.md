@@ -59,4 +59,4 @@ All ascii logos are based upon the NHL logos which I do not own in any way, and 
 The API endpoints used were provided by https://github.com/Zmalski/NHL-API-Reference.  A fantastic collection of public API endpoints from the NHL
 
 ## AI Usage 
-Claude was used for the ascii formatting portion of this project
+Claude was used for the ascii formatting portion of this project.  
